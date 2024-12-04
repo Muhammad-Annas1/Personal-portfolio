@@ -7,6 +7,10 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isMenu, setMenu] = useState(false);
 
+  const toggleMenu = () => {
+    setMenu((prev) => !prev);
+  };
+
   return (
     <div className="container z-50 max-w-[1280px] py-2 px-6 fixed top-0 w-[100vw] bg-[#303043ba] text-white">
       {/* Nav1 for Desktop */}
@@ -39,6 +43,9 @@ const Navbar = () => {
           </li>
         </ul>
         {/* Menu Icon */}
+        <button onClick={toggleMenu} className="md:hidden text-white">
+          Toggle Menu
+        </button>
       </div>
 
       {/* Nav2 for Mobile */}
