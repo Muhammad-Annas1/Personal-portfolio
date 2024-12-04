@@ -1,22 +1,16 @@
-
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-
 const Navbar = () => {
   const [isMenu, setMenu] = useState(false);
-
-  function toggle() {
-    setMenu(!isMenu);
-  }
 
   return (
     <div className="container z-50 max-w-[1280px] py-2 px-6 fixed top-0 w-[100vw] bg-[#303043ba] text-white">
       {/* Nav1 for Desktop */}
-      <div className=" flex justify-between items-center w-[100%] ">
+      <div className="flex justify-between items-center w-[100%]">
         <div>
           <Image
             src={("/picture/abouts.jpg")}
@@ -30,7 +24,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        <ul className=" md:flex hidden gap-10 items-center font-[700] mr-5 text-[20px]">
+        <ul className="md:flex hidden gap-10 items-center font-[700] mr-5 text-[20px]">
           <li>
             <Link className="line" href={"/"}>Home</Link>
           </li>
@@ -45,26 +39,19 @@ const Navbar = () => {
           </li>
         </ul>
         {/* Menu Icon */}
-      
-          
-      
       </div>
-      
 
       {/* Nav2 for Mobile */}
       <div 
-        className={` nav2 md:hidden fixed top-[0px] right-0 w-full h-screen flex  justify-center bg-[#080404ee] text-white font-bold z-10
+        className={`nav2 md:hidden fixed top-[0px] right-0 w-full h-screen flex justify-center bg-[#080404ee] text-white font-bold z-10
           transition-all duration-500 ease-in-out transform ${
             isMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
           }`}
       >
-        <div className="absolute right-11 top-10 font-semibold">
+        <div className="absolute right-11 top-10 font-semibold"></div>
 
-        
-        </div>
-       
-        <ul className="navs z-10 flex md:hidden flex-col justify-center items-center   text-[26px] gap-16">
-          <li >
+        <ul className="navs z-10 flex md:hidden flex-col justify-center items-center text-[26px] gap-16">
+          <li>
             <Link href={"/"}>Home</Link>
           </li>
           <li>
